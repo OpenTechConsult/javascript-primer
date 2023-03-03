@@ -17,3 +17,8 @@ console.log(`Type: ${typeof myVariable}`);
 
 myVariable = 100;
 console.log(`Type: ${typeof myVariable}`);
+
+let firstCity;
+
+let secondCity = firstCity || "London";
+console.log(`City: ${secondCity}`);
