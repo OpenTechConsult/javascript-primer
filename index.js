@@ -33,4 +33,10 @@ function sumPrices(first, second, third) {
 }
 
 totalPrice = sumPrices(hatPrice, bootsPrice);
-console.log(`Total Price: ${totalPrice}`);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
+
+totalPrice = sumPrices(100, 200, 300);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
+
+totalPrice = sumPrices(100, 200);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
