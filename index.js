@@ -12,7 +12,7 @@ if (hatPrice === bootsPrice) {
     console.log("Prices are the same");
 } else {
     console.log("Prices are different");
-}
+}   
 
 let totalPrice = Number(hatPrice) + Number(bootsPrice);
 console.log(`Total price: ${totalPrice}`);
@@ -27,3 +27,10 @@ let firstCity;
 
 let secondCity = firstCity || "London";
 console.log(`City: ${secondCity}`);
+
+function sumPrices(first, second, third) {
+    return first + second + third;
+}
+
+totalPrice = sumPrices(hatPrice, bootsPrice);
+console.log(`Total Price: ${totalPrice}`);
