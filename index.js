@@ -28,11 +28,8 @@ let firstCity;
 let secondCity = firstCity || "London";
 console.log(`City: ${secondCity}`);
 
-function sumPrices(...numbers) {
-    return numbers.reduce((total, val) => {
-        return total + (Number.isNaN(Number(val)) ? 0 : Number(val));
-    }, 0);
-}
+let sumPrices = (...numbers) => numbers.reduce((total, val) => 
+            total + (Number.isNaN(Number(val)) ? 0 : Number(val)));
 
 totalPrice = sumPrices(hatPrice, bootsPrice);
 console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
