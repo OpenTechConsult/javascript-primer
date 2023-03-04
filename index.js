@@ -28,8 +28,10 @@ let firstCity;
 let secondCity = firstCity || "London";
 console.log(`City: ${secondCity}`);
 
-function sumPrices(first, second, third = 0) {
-    return first + second + third;
+function sumPrices(...numbers) {
+    return numbers.reduce(function(total, val) {
+        return total + val;
+    }, 0);
 }
 
 totalPrice = sumPrices(hatPrice, bootsPrice);
