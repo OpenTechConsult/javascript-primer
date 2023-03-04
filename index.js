@@ -30,7 +30,7 @@ console.log(`City: ${secondCity}`);
 
 function sumPrices(...numbers) {
     return numbers.reduce(function(total, val) {
-        return total + val;
+        return total + (Number.isNaN(Number(val)) ? 0 : Number(val));
     }, 0);
 }
 
@@ -40,5 +40,5 @@ console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 totalPrice = sumPrices(100, 200, 300);
 console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 
-totalPrice = sumPrices(100, 200);
+totalPrice = sumPrices(100, 200, undefined, false, "hello");
 console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
