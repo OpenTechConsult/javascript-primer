@@ -53,3 +53,7 @@ console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 totalPrice = sumPrices(...prices);
 console.log(`Total: ${totalPrice} ${typeof totalPrice}`);
 
+// using spread operator on array to expand the content of an array for easy concatenation
+let combinedArray = [...names, ...prices];
+combinedArray.forEach(element => console.log(`Combined Array Element: ${element}`));
+
