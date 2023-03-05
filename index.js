@@ -61,3 +61,7 @@ combinedArray.forEach(element => console.log(`Combined Array Element: ${element}
 let [one, two] = names;
 console.log(`One: ${one}, Two: ${two}`);
 
+// ignoring elements when destructuring an array
+let [,,three] = names;
+console.log(`Three: ${three}`);
+
