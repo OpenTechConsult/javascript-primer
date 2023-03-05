@@ -28,6 +28,16 @@ let firstCity;
 let secondCity = firstCity || "London";
 console.log(`City: ${secondCity}`);
 
+// Defining and using arrays
+let names = ["Hat", "Boots", "Gloves"];
+let prices = [];
+
+prices.push(100);
+prices.push("100");
+prices.push(50.25);
+
+console.log(`First Item: ${names[0]}: ${prices[0]}`);
+
 let sumPrices = (...numbers) => numbers.reduce((total, val) => 
             total + (Number.isNaN(Number(val)) ? 0 : Number(val)));
 
@@ -38,4 +48,8 @@ totalPrice = sumPrices(100, 200, 300);
 console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 
 totalPrice = sumPrices(100, 200, undefined, false, "hello");
-console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
+console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`); 
+
+totalPrice = sumPrices(...prices);
+console.log(`Total: ${totalPrice} ${typeof totalPrice}`);
+
