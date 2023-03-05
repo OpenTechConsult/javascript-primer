@@ -38,6 +38,17 @@ prices.push(50.25);
 
 console.log(`First Item: ${names[0]}: ${prices[0]}`);
 
+// working with objects
+let hat = {
+    name: "Hat",
+    price: 100
+};
+
+let boots = {
+    name: "Boots",
+    price: "100"
+}
+
 let sumPrices = (...numbers) => numbers.reduce((total, val) => 
             total + (Number.isNaN(Number(val)) ? 0 : Number(val)));
 
@@ -52,6 +63,9 @@ console.log(`Total Price: ${totalPrice} ${typeof totalPrice}`);
 
 totalPrice = sumPrices(...prices);
 console.log(`Total: ${totalPrice} ${typeof totalPrice}`);
+
+totalPrice = sumPrices(hat.price, boots.price);
+console.log(`Total: ${totalPrice} ${typeof totalPrice} - `);
 
 // using spread operator on array to expand the content of an array for easy concatenation
 let combinedArray = [...names, ...prices];
