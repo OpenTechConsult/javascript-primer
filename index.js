@@ -57,3 +57,7 @@ console.log(`Total: ${totalPrice} ${typeof totalPrice}`);
 let combinedArray = [...names, ...prices];
 combinedArray.forEach(element => console.log(`Combined Array Element: ${element}`));
 
+// destructuring an array
+let [one, two] = names;
+console.log(`One: ${one}, Two: ${two}`);
+
